@@ -82,7 +82,7 @@ const Form = ( { getUsers, onEdit, setOnEdit } ) => {
                 <styles.Label>Birthdate</styles.Label>
                 <styles.Input name="birthdate" type="date"></styles.Input>
             </styles.InputArea>
-            <styles.Button type="submit">Add</styles.Button>
+            <styles.Button type="submit">Add User</styles.Button>
         </styles.FormContainer>
     )
 }

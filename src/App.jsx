@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import axios from "axios"
 
-import Form from "./components/form/Form"
-import Grid from "./components/grid/Grid"
+import Form from "./components/Form/Form"
+import Grid from "./components/Grid/Grid"
 
 import GlobalStyle from './Global.styled'
 import * as styles from "./App.styled"

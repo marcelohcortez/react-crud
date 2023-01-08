@@ -31,6 +31,14 @@ export const Td = styled.td`
     text-align: ${(props) => (props.alignCenter ? "center" : "start")};
     width: ${(props) => (props.width ? props.width : "auto")};
 
+    svg {
+        cursor: pointer;
+    }
+    
+    svg:hover {
+        fill: red;
+    }
+
     @media (max-width: 500px) {
         ${(props) => props.onlyWeb && "display:none"}
     }
