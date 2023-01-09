@@ -50,6 +50,12 @@ export const db = mysql.createConnection({
     database: "react_crud_01"
 })
 ```
+In the server in the 'ServerUrl' file inside 'components' folder
+```bash
+const ServerUrl = 'http://localhost:8800/'
+
+export default ServerUrl
+```
 In the API folder, run
 ```bash
   yarn start
