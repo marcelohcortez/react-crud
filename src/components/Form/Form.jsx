@@ -3,6 +3,8 @@ import { useRef, useEffect } from "react"
 import { toast, ToastContainer } from 'react-toastify'
 import axios from "axios"
 
+import ServerUrl from "../ServerUrl/ServerUrl"
+
 import * as styles from "./Form.styled"
 
 const Form = ( { getUsers, onEdit, setOnEdit } ) => {
@@ -35,7 +37,7 @@ const Form = ( { getUsers, onEdit, setOnEdit } ) => {
 
         if (onEdit) {
             await axios
-                .put("http://localhost:8800/" + onEdit.id, {
+                .put(ServerUrl + onEdit.id, {
                     name: currentForm.name.value,
                     email: currentForm.email.value,
                     phone: currentForm.phone.value,
@@ -45,7 +47,7 @@ const Form = ( { getUsers, onEdit, setOnEdit } ) => {
                 .catch(({ data }) => toast.error(data))
         } else {
             await axios
-                .post("http://localhost:8800/", {
+                .post(ServerUrl, {
                     name: currentForm.name.value,
                     email: currentForm.email.value,
                     phone: currentForm.phone.value,

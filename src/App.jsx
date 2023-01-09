@@ -5,6 +5,7 @@ import axios from "axios"
 
 import Form from "./components/Form/Form"
 import Grid from "./components/Grid/Grid"
+import ServerUrl from './components/ServerUrl/ServerUrl'
 
 import GlobalStyle from './Global.styled'
 import * as styles from "./App.styled"
@@ -17,7 +18,7 @@ function App() {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8800")
+      const res = await axios.get(ServerUrl)
       setUsers(res.data.sort((a, b) => (a.name > b.name ? 1 : -1)))
     } catch (error) {
       toast.error(error)

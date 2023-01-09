@@ -3,12 +3,14 @@ import { toast } from "react-toastify"
 
 import axios from "axios"
 
+import ServerUrl from "../ServerUrl/ServerUrl"
+
 import * as styles from "./Grid.styled"
 
 const Grid = ({ users, setUsers, setOnEdit }) => {
     const handleDelete = async (id) => {
         await axios
-            .delete("http://localhost:8800/" + id)
+            .delete(ServerUrl + id)
             .then(({ data }) => {
                 const newArray = users.filter((user) => user.id !== id )
 
