@@ -14,7 +14,7 @@ Simple CRUD project created with:
     - MySql
         - To allow the connection to MySQL database
     - Express
-        - To controle the routes and listen to the necessary port
+        - To control the routes and listen to the necessary port
     - Nodemon
         - To reset the service automatically when needed
     - CORS
